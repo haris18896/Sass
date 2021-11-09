@@ -68,8 +68,71 @@ body{
 </html>
 ```
 
+---
+Now setting up the header elements. logo and navigation icon
 
+    * when we specify the height of the <img> tag, then the width of the img tag will automatically be adjusted by the browser and vice versa
 
+```css
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    
+}
+
+.logo{
+    height: 35px;                       /* height of the logo */
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    /*toppositionofthetextboxW.R.Tparentelement*/left: 50%;
+    /*toppositionofthetextboxW.R.Tparentelement*//*background-color: red;
+    */transform: translate(-50%, -50%);
+    /*tocenterthetextbox*/-webkit-transform: translate(-50);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.4px;
+
+}
+```
+
+```html
+<header class="header">
+    <div class="logo-box">
+        <img src="./img/logo-white.png" alt="logo" class="logo" />
+    </div>
+    <div class="text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary-main">Outdoors</span>
+            <span class="heading-primary-sub">is Where life happens</span>
+        </h1>
+    </div>
+</header>
+```
+---
 
 
 
@@ -77,4 +140,7 @@ body{
     1. add a background image
     2. add a linear gradient to the background image
     3. add a `clip-path: polygon` to the the background image
+    4. add logo the left side w.r.t to the parent element
+    5. add text in the middle
+    6. 
 
