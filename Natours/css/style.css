@@ -51,19 +51,19 @@ body{
 .text-box{
     position: absolute;
     top: 40%;
-    /*toppositionofthetextboxW.R.Tparentelement*/left: 50%;
-    /*toppositionofthetextboxW.R.Tparentelement*//*background-color: red;
-    */transform: translate(-50%, -50%);
-    /*tocenterthetextbox*/-webkit-transform: translate(-50);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
 }
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden;        /* hides the shaky animations, when animation is ended(it's a hack for the shaky animations) */
+    -webkit-backface-visibility: hidden;
 }
 
 .heading-primary-main{
@@ -71,11 +71,74 @@ body{
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+
+
+    /* animation-iteration-count: 3; */
+    /*animation-delay: 3s;*/
 }
 .heading-primary-sub{
     display: block;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 
+
+
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+}
+    80%{
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        -o-transform: translateX(100px);
+}
+    80%{
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

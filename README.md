@@ -134,6 +134,92 @@ Now setting up the header elements. logo and navigation icon
 ```
 ---
 
+    * adding css animations and for that we will use `@key-frames`
+```css
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;        /* hides the shaky animations, when animation is ended(it's a hack for the shaky animations) */
+    -webkit-backface-visibility: hidden;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+
+
+    /* animation-iteration-count: 3; */
+    /*animation-delay: 3s;*/
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+
+
+
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+}
+    80%{
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        -o-transform: translateX(100px);
+}
+    80%{
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+```
 
 
     Steps:
@@ -142,5 +228,6 @@ Now setting up the header elements. logo and navigation icon
     3. add a `clip-path: polygon` to the the background image
     4. add logo the left side w.r.t to the parent element
     5. add text in the middle
-    6. 
+    6. add css animation now.
+    7. 
 
