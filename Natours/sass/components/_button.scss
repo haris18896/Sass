@@ -6,7 +6,7 @@
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         display: inline-block;
         border-radius: 10rem;
         -webkit-border-radius: 10rem;
@@ -89,4 +89,31 @@
         -webkit-animation: moveInButton 1.5s ease-out 0.75s;
         animation-fill-mode: backwards;                     /* hide the animation for a while, */
     }
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        font-weight: 600;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 6px;
+        transition: all 0.2s ;
+    }
+
+    &:hover{
+        color: $color-white;
+        background-color: $color-primary;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-0.2rem);
+
+}
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+        transform: translateY(0);
+}
 }
