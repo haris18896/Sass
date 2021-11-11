@@ -1,0 +1,92 @@
+
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        font-size: 1.6rem;
+        display: inline-block;
+        border-radius: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        transition: all 0.2s ;
+        -webkit-transition: all 0.2s ;
+        -moz-transition: all 0.2s ;
+        -ms-transition: all 0.2s ;
+        -o-transition: all 0.2s ;
+        position: relative;
+    }
+    
+    &:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        -webkit-transform: translateY(-0.3rem);
+        -moz-transform: translateY(-0.3rem);
+        -ms-transform: translateY(-0.3rem);
+        -o-transform: translateY(-0.3rem);
+
+        &::after{
+            transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+    
+    &:active{
+        transform: translateY(-0.1rem);
+        -webkit-transform: translateY(-0.1rem);
+        -moz-transform: translateY(-0.1rem);
+        -ms-transform: translateY(-0.1rem);
+        -o-transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-dark;
+
+        &::after{
+            background-color: $color-white;
+        }
+    
+    }
+    
+    &::after{
+        /* fading effect */
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s ease-out ;
+        -webkit-transition: all 0.4s ease-out ;
+        -moz-transition: all 0.4s ease-out ;
+        -ms-transition: all 0.4s ease-out ;
+        -o-transition: all 0.4s ease-out ;
+    }
+    
+    
+    
+    
+
+    &--animated{
+        animation: moveInButton 1.5s ease-out 0.75s;
+        -webkit-animation: moveInButton 1.5s ease-out 0.75s;
+        animation-fill-mode: backwards;                     /* hide the animation for a while, */
+    }
+}
