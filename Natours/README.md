@@ -10,9 +10,9 @@ compile the `Scss` to `css` using `node-sass`
 for that we will have to write a `script` in the `package.json` file, iin this file will add the input and output of the sass directories.
 the `-w` flag means the sass is watching for the changes.
 
-   `"compile:sass": "node-sass sass/main.scss css/styles.css -w"`
+   `"compile-sass": "node-sass sass/main.scss css/styles.css -w"`
 
-   `npm run compile:sass`
+   `npm run compile-sass`
 
 ---
 ---

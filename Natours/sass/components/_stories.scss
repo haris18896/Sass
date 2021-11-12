@@ -1,0 +1,107 @@
+.story{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: $color-white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    font-size: $default-font-size;
+    padding: 6rem;
+    padding-left: 9rem;
+    transform: skewX(-12deg);
+    -webkit-transform: skewX(-12deg);
+    -moz-transform: skewX(-12deg);
+    -ms-transform: skewX(-12deg);
+    -o-transform: skewX(-12deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    
+    
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        position: relative;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        -webkit-transform: translateX(-3rem) skewX(12deg);
+        -moz-transform: translateX(-3rem) skewX(12deg);
+        -ms-transform: translateX(-3rem) skewX(12deg);
+        -o-transform: translateX(-3rem) skewX(12deg);
+}
+
+    &__img{
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        -webkit-transform: translateX(-4rem) scale(1.4);
+        -moz-transform: translateX(-4rem) scale(1.4);
+        -ms-transform: translateX(-4rem) scale(1.4);
+        -o-transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+}
+
+    &__text{
+        transform: skewX(12deg);
+        -webkit-transform: skewX(12deg);
+        -moz-transform: skewX(12deg);
+        -ms-transform: skewX(12deg);
+        -o-transform: skewX(12deg);
+
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+}
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        -webkit-transform: translate(-50%, 20%);
+        -moz-transform: translate(-50%, 20%);
+        -ms-transform: translate(-50%, 20%);
+        -o-transform: translate(-50%, 20%);
+        color: $color-white;
+        font-size: 1.6rem;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+}
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+}
+
+    &:hover &__img{
+        transform: translateX(-4rem) scale(1.2);
+        -webkit-transform: translateX(-4rem) scale(1.2);
+        -moz-transform: translateX(-4rem) scale(1.2);
+        -ms-transform: translateX(-4rem) scale(1.2);
+        -o-transform: translateX(-4rem) scale(1.2);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        overflow: hidden;
+}
+
+}
