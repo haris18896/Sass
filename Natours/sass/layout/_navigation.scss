@@ -1,26 +1,108 @@
 .navigation{
     &__checkbox{
-
+        display: none;
     }
 
     &__button{
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        z-index: 2000;
 
-    }
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
 
     &__background{
-
-    }
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light-text, $color-primary-dark-text);
+        z-index: 1000;
+        transform: scale(90);
+        -webkit-transform: scale(90);
+        -moz-transform: scale(90);
+        -ms-transform: scale(90);
+        -o-transform: scale(90);
+}
 
     &__nav{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0s;
+        z-index: 1500;
 
     }
 
     &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
 
-    }
+        list-style: none;
+        text-align: center;
+}
 
     &__item{
-        
+        margin: 1rem;
     }
 
+    &__link{
+        color: $color-white ;
+
+        &:link,
+        &visited{
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 230%;
+            transition: all .4s ;
+            -webkit-transition: all .4s ;
+            -moz-transition: all .4s ;
+            -ms-transition: all .4s ;
+            -o-transition: all .4s ;
+        }
+
+        span {
+            margin-right: 1.5rem;
+            display: inline-block;
+        }
+
+
+        &:hover,
+        &:active{
+            color: $color-primary ;
+            background-position: 100%;
+
+            transform: translateX(1rem);
+            -webkit-transform: translateX(1rem);
+            -moz-transform: translateX(1rem);
+            -ms-transform: translateX(1rem);
+            -o-transform: translateX(1rem);
+        }
+    }
 }
