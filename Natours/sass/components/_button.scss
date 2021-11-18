@@ -1,6 +1,6 @@
 
 .btn {
-
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -19,6 +19,10 @@
         -ms-transition: all 0.2s ;
         -o-transition: all 0.2s ;
         position: relative;
+
+        // change for the  <button> element
+        border: none;
+        cursor: pointer;
     }
     
     &:hover{
@@ -39,7 +43,9 @@
         }
     }
     
-    &:active{
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-0.1rem);
         -webkit-transform: translateY(-0.1rem);
         -moz-transform: translateY(-0.1rem);
