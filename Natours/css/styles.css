@@ -762,8 +762,8 @@ body {
 
 .navigation__button {
   background-color: #fff;
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
   top: 6rem;
   right: 6rem;
@@ -773,11 +773,13 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
 
 .navigation__background {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -862,6 +864,53 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    height: 2px;
+    width: 3rem;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon:after {
+  top: 0;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg); }
 
 .section-about {
   background-color: #f7f7f7;
