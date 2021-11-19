@@ -1,3 +1,22 @@
+/*
+breakpoint argument choices
+0 - 600px: phone
+600px - 960px: tablet
+960px - 1280px: desktop
+1280px - 1440px: large desktop
+1440px - 1600px: x-large desktop
+
+bootstrap 5: breakpoints
+xX-small : 0 - 400px
+X-small : 400 - 586px
+small : 586px - 768px
+medium : 768px - 992px
+large : 992px - 1200px
+X-large : 1200px - 1600px
+xX-large : 1600px - 1920px
+
+1em === 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -68,7 +87,16 @@
 
 html {
   font-size: 62.5%;
-  /* 1rem = 10px */ }
+  /* 1rem = 10px, 10px/16px = 62.5% */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

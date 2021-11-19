@@ -16,3 +16,89 @@
     -ms-transform: translate();
     -o-transform: translate();
 }
+
+// MEDIA QUERIES MANAGER
+/*
+breakpoint argument choices
+0 - 600px: phone
+600px - 960px: tablet
+960px - 1280px: desktop
+1280px - 1440px: large desktop
+1440px - 1600px: x-large desktop
+
+bootstrap 5: breakpoints
+xX-small : 0 - 400px
+X-small : 400 - 586px
+small : 586px - 768px
+medium : 768px - 992px
+large : 992px - 1200px
+X-large : 1200px - 1600px
+xX-large : 1600px - 1920px
+
+1em === 16px
+*/
+
+
+// @mixin respond($breakpoint){
+//     @if $breakpoint == xX-small {
+//         @media (max-width: 25em) {  // 600px
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == X-small {
+//         @media (max-width: 35.5em) { // 568px
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == small {
+//         @media (max-width: 48em) { // 768px
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == medium {
+//         @media (max-width: 62em) { // 992px
+//             @content;
+//         }
+//     }
+
+//     @if $breakpoint == large {
+//         @media (max-width: 75em) {    // 1200px
+//             @content;
+//         }
+//     }
+
+//     @if $breakpoint == X-large {
+//         @media (max-width: 100em) {    // 1600px
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == xX-large {
+//         @media (min-width: 120em) {    // 1920px
+//             @content;
+//         }
+//     }
+// }
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {  // 600px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.25em) { // 900px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { // 1200px
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { // 1800px
+            @content;
+        }
+    }
+}
