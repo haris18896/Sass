@@ -19,6 +19,20 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     overflow: hidden;
+
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone){
+        transform: skew(0);
+        -webkit-transform: skew(0);
+        -moz-transform: skew(0);
+        -ms-transform: skew(0);
+        -o-transform: skew(0);
+}
     
     
     &__shape{
@@ -35,6 +49,14 @@
         -moz-transform: translateX(-3rem) skewX(12deg);
         -ms-transform: translateX(-3rem) skewX(12deg);
         -o-transform: translateX(-3rem) skewX(12deg);
+
+        @include respond(phone){
+            transform: skew(0) translateX(-3rem);
+            -webkit-transform: skew(0) translateX(-3rem);
+            -moz-transform: skew(0) translateX(-3rem);
+            -ms-transform: skew(0) translateX(-3rem);
+            -o-transform: skew(0) translateX(-3rem);
+    }
 }
 
     &__img{
@@ -67,6 +89,14 @@
         -moz-transition: all .5s;
         -ms-transition: all .5s;
         -o-transition: all .5s;
+
+        @include respond(phone){
+            transform: skew(0);
+            -webkit-transform: skew(0);
+            -moz-transform: skew(0);
+            -ms-transform: skew(0);
+            -o-transform: skew(0);
+}
 }
 
     &__caption{
