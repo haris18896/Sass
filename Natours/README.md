@@ -29,7 +29,28 @@ but we are going to install it globally
 ---
 
 ## Build Process
+``` npm i concat --save-dev```
 
+```
+npm i autoprefixer --save-dev
+npm i postcss-cli --save-dev
+```
+
+`autoprefixer` will add all the prefixes needed for the browsers.
+
+```json
+// package.json
+  "scripts": {
+    "watch-sass": "node-sass sass/main.scss css/styles.css -w",
+    "compile-sass" : "node-sass sass/main.scss css/styles.comp.css",
+    "concat-css": "concat -o css/styles.concat.css css/icon-font.css css/style.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.concat.css -o css/styles.prefix.css"
+  },
+```
+
+at the end we will make a command to run all the `json commands` in the `package.json` file.
+
+we made 2 .css files, one for the compiled css and one for the watching sass. so that when we make build we didn't want to compile the sass again.
 
 
 ---

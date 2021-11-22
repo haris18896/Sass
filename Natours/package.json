@@ -4,12 +4,18 @@
   "description": "natours web theme",
   "main": "index.js",
   "scripts": {
-    "compile-sass": "node-sass sass/main.scss css/styles.css -w"
+    "watch-sass": "node-sass sass/main.scss css/styles.css -w",
+    "compile-sass": "node-sass sass/main.scss css/styles.comp.css",
+    "concat-css": "concat -o css/styles.concat.css css/icon-font.css css/styles.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' css/styles.concat.css -o css/styles.prefix.css"
   },
   "author": "haris",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.1",
+    "postcss-cli": "^9.0.2"
   }
 }
