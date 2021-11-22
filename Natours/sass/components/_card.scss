@@ -183,7 +183,9 @@
 
 
 
-    @include respond(tab-port){
+    // @include respond(tab-port){
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover:none){       // hover:none is for touch devices
         height: auto;
         border-radius:   4px;
         -webkit-border-radius:   4px;
