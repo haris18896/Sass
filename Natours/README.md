@@ -59,6 +59,8 @@ we made 2 .css files, one for the compiled css and one for the watching sass. so
 
 `npm install npm-run-all --save-dev`
 
+
+#### production workflow
 ```json
   "scripts": {
     "watch-sass": "node-sass sass/main.scss css/styles.css -w",
@@ -73,6 +75,27 @@ we made 2 .css files, one for the compiled css and one for the watching sass. so
 ```
 
 ---
+
+#### development workflow
+now we are going to make a development workflow.
+
+in which we are going to add `watch-sass` and `live-server` on a single command, so that these 2 commands run at the same time in parallel. 
+
+```json
+  "scripts": {
+    "watch-sass": "node-sass sass/main.scss css/styles.css -w",
+    "dev-server": "live-server",
+    "start" : "npm-run-all --parallel dev-server watch-sass",
+
+    "compile-sass": "node-sass sass/main.scss css/styles.comp.css",
+    "concat-css": "concat -o css/styles.concat.css css/icon-font.css css/styles.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' css/styles.concat.css -o css/styles.prefix.css",
+    "compress-css" : "node-sass css/styles.prefix.css css/styles.css --output-style compressed",
+
+    "build-css" : "npm-run-all compile-sass concat-css prefix-css compress-css"
+  },
+```
+---
 ---
 
     Header:
@@ -85,6 +108,7 @@ we made 2 .css files, one for the compiled css and one for the watching sass. so
     6. add css animation now.
     7. adding an animated anchor button
     8. make a build css file
+    9. make a development workflow with `watch-sass and live-server`
 
 
 
