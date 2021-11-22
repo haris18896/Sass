@@ -14,8 +14,14 @@
     -ms-transition:all .3s;
     -o-transition:all .3s;
 
-    @include respond(tab-port){
+
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, 0.4);
     }
+
+
     
     
 
