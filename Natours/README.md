@@ -28,6 +28,13 @@ but we are going to install it globally
 ---
 ---
 
+## Build Process
+
+
+
+---
+---
+
     Header:
     
     1. add a background image
@@ -129,6 +136,21 @@ for that we will use `@media query`,
     // change the 600px and 2000px to '37.5em and 125em' respectively.
     @media (min-resolution: 192dpi) and (min-width: 600px) , 
             (min-width: 2000px){
+        background-image: 
+        linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light,0.8),
+            rgba($color-secondary-dark,0.8),
+            ),
+        url('../img/hero.jpg');
+    }
+```
+
+```scss
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) , 
+            (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em) ,          // for safari
+            (min-width: 125em){
         background-image: 
         linear-gradient(
             to right bottom,
