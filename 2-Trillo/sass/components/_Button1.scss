@@ -1,0 +1,64 @@
+.btn{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border: none;
+
+    background-image: linear-gradient(to right, $color-Primary-light, $color-Primary-dark);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    & > *{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+    }
+    
+    
+    
+    &__visible{
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible{
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+}
+
+    &:hover{
+    background-image: linear-gradient(to left, $color-Primary-light, $color-Primary-dark);
+
+    }
+
+    &:hover &__visible{
+            transform: translateY(100%);
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+}
+
+    &:hover &__invisible{
+            top: 0;
+        }
+    &:focus{
+        outline: none;
+        animation: pulsate 1s infinite;
+        -webkit-animation: pulsate 1s infinite;
+}
+}
