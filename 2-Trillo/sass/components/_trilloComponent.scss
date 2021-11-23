@@ -249,15 +249,23 @@
 
 // OVERVIEW
 .overview{
+    margin-top: -.4rem;
     display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-Grey-light-3;
+
     
     &__heading{
-
+        font-size: 2.25rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
     }
 
     &__stars{
         margin-right: auto;
-        background-color: orangered;
+        display: flex;
     }
 
     &__icon-star,
@@ -268,19 +276,67 @@
     }
 
     &__location{
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        color: $color-Grey-light-2;
+    }
+
+    &__icon-location{
+        margin-right: .5rem;
     }
 
     &__rating{
-
+        background-color: $color-primary;
+        margin-left: 3rem;
+        color: #fff;
+        padding: 0 2.25rem;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     &__rating-average{
-
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -3px;
     }
 
     &__rating-count{
-
+        font-size: .8rem;
+        text-transform: uppercase;
     }
 }
 
+
+// BUTTON  INLINE
+.btn__inline{
+    border: none;
+    color: $color-primary;
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+
+
+    &:hover{
+        color: $color-Grey-dark-1;
+    }
+
+    &:focus,
+    &:hover{
+        outline: none;
+        animation: pulsate 1s infinite;
+        -webkit-animation: pulsate 1s infi;
+}
+}
 
