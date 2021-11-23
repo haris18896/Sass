@@ -315,7 +315,7 @@ body {
   margin-top: -.4rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #f0eeee; }
+  border-bottom: 1px solid #f4f2f2; }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -373,7 +373,67 @@ body {
   .btn__inline:focus, .btn__inline:hover {
     outline: none;
     animation: pulsate 1s infinite;
-    -webkit-animation: pulsate 1s infi; }
+    -webkit-animation: pulsate 1s infinite; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: #faf9f9;
+  border-bottom: 1px solid #f4f2f2; }
+
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem; }
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1; }
+
+.paraghraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: .7rem;
+    background-color: #eb2f64;
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: #999;
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 .row {
   max-width: 114rem;
@@ -442,5 +502,5 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  flex: 1;
-  height: 80rem; }
+  background-color: #fff;
+  flex: 1; }
