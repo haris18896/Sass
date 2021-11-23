@@ -3,9 +3,13 @@
     margin: 8rem auto;
     background-color: $color-Grey-light-2;
     box-shadow: $shadow-dark;
-    
-    
     min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header{
@@ -21,6 +25,10 @@
 .content{
     display: flex;
     // margin-top: 6rem;
+
+    @media only screen and (max-width: $bp-medium){
+        flex-direction: column;
+    }
 }
 
 .sidebar{
@@ -37,6 +45,19 @@
     background-color: #fff;
     flex: 1;
     // height: 80rem;
+}
+
+// DESCRIPTION
+.detail{
+    display: flex;
+    padding: 4.5rem;
+    background-color: $color-Grey-light-1;
+    border-bottom: $line;
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 2rem;
+        margin-right: 3rem;
+    }
 }
 
 .description{
