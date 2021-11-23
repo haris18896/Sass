@@ -26,9 +26,14 @@
 .sidebar{
     background-color: $color-Grey-dark-1;
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view{
-    background-color: orangered;
+    // background-color: orangered;
     flex: 1;
+    height: 80rem;
 }

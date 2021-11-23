@@ -147,12 +147,140 @@
     }
 }
 
+// SIDE NAVIGATION
+.side-nav{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    &__item{
+        position: relative;
+
+        &:not(:last-child){
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__item::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: $color-primary;
+        transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        -o-transform: scaleY(0);
+        transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+        -webkit-transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+        -moz-transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+        -ms-transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+        -o-transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+}
+
+    &__item:hover::before,
+    &__item--active::before{
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+
+        width: 100%;
+}
+
+    &__item:active::before{
+        background-color: $color-Primary-light;
+    }
 
 
+    &__link:link,
+    &__link:visited{
+        color: $color-Grey-light-1;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 1.5rem 3rem;
+
+        display: flex;
+        align-items: center;
+
+        // z-index only work with position
+        position: relative;
+        z-index: 10;
+
+    }
 
 
+    &__icon{
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;         // inheriting the parent color
 
+    }
+}
 
+// LEGAL TEXT
+.legal{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem ;
+    color: $color-Grey-light-4;
+}
 
+// Gallery
+.gallery{
+    display: flex;
+
+    &__item{
+
+    }
+
+    &__photo{
+        width: 100%;
+        display: inline-block;
+
+    }
+}
+
+// OVERVIEW
+.overview{
+    display: flex;
+    
+    &__heading{
+
+    }
+
+    &__stars{
+        margin-right: auto;
+        background-color: orangered;
+    }
+
+    &__icon-star,
+    &__icon-location{
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: $color-primary;
+    }
+
+    &__location{
+    }
+
+    &__rating{
+
+    }
+
+    &__rating-average{
+
+    }
+
+    &__rating-count{
+
+    }
+}
 
 
