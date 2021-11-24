@@ -13,6 +13,13 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-smallest){
+        order: 1;
+        flex: 0 0 100%;
+        background-color: $color-Grey-light-2;
+
+    }
+
 
     &__input{
         font-family: inherit;
@@ -163,6 +170,7 @@
 
         &:not(:last-child){
             margin-bottom: .5rem;
+
             @media only screen and (max-width: $bp-medium){
                 margin-bottom: 0;
             }
@@ -229,6 +237,12 @@
             padding: 2rem;
         }
 
+        @media only screen and (max-width: $bp-small){
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+            
+        }
+
     }
 
 
@@ -237,6 +251,12 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;         // inheriting the parent color
+        @media only screen and (max-width: $bp-small){
+            margin-right: 0;
+            margin-bottom: 7px;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
 
     }
 }
@@ -250,7 +270,6 @@
 
     @media only screen and (max-width: $bp-medium){
         display: none;
-
     }
 
 }
@@ -284,6 +303,11 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem; 
+        }
     }
 
     &__stars{
@@ -319,17 +343,30 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-small){
+            padding: 0 1.5rem; 
+        }
     }
 
     &__rating-average{
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 1.8rem;
+        }
+        
     }
 
     &__rating-count{
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small){
+            font-size: .5rem;
+        }
     }
 }
 
@@ -398,15 +435,22 @@
         margin-right: .7rem;
 
         // Older browsers, use @support here on mask
-        // background-image: url('../img/chevron-thin-right.svg');
-        // background-size: cover;
+        background-image: url('../img/chevron-thin-right.svg');
+        background-size: cover;
 
         // New browser - masks
-        background-color: $color-primary;
-        -webkit-mask-image: url('../img/chevron-thin-right.svg');
-        -webkit-mask-size: cover;
-        mask-image: url('../img/chevron-thin-right.svg');
-        mask-size: cover;
+        // if the browser supports the mask-image then below code will run, else the above code will be rendered
+        @supports (mask-size: url()) or(-webkit-mask-image: url()){
+            background-color: $color-primary;
+            -webkit-mask-image: url('../img/chevron-thin-right.svg');
+            -webkit-mask-size: cover;
+            mask-image: url('../img/chevron-thin-right.svg');
+            mask-size: cover;
+
+            // after that, also remove the older browsers code here
+            background-image: none;
+        }
+        
 
     }
     
@@ -583,3 +627,9 @@
 
 
 }
+
+
+
+
+
+
